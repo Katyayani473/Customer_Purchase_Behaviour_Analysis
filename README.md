@@ -73,75 +73,97 @@ CREATE TABLE retail_analysis (
   IsReturn INT,
   Revenue FLOAT
 );
+```
 ---
+
 ## Business Problems and Solutions
-### 1.Total Revenue
-select sum(revenue) as totalrevenue from retail_analysis
+
+### 1. Total Revenue
+```sql
+SELECT SUM(revenue) AS totalrevenue
+FROM retail_analysis;
+```
+
  
 
 ### 2.Top customers
+```sql
 select Customerid,round(sum(revenue),2) as Totalsales 
 from retail_analysis group by Customerid order by 
 Totalsales  desc limit 10
-
+```
  
 ### 3.Customer Purchase Frequency
+```sql
 SELECT customerid, COUNT(DISTINCT invoiceno) AS purchase_count
 FROM retail_analysis
 GROUP BY customerid
 ORDER BY purchase_count DESC;
- 
+ ```
 
 ### 4.Sales Per Month
+```sql
   select month(InvoiceDate) as month,sum(revenue) as Totalrevenue
  from retail_analysis
  group by  month(InvoiceDate) order by Totalrevenue desc 
-  
+```  
  
 ### 5.How many unique customers?
+```sql
 select count(distinct customerid) as uniqcustomers from retail_analysis
- 
+ ```
+
 ### 6.How many total orders?
+```sql
 select count(*) as torders from retail_analysis
- 
+``` 
 
 ### 7.Which customers purchase most recently?
+```sql
 select customerid from retail_analysis order by invoicedate desc limit 1
- 
+``` 
 
 ### 8.Top 10 selling products
+```sql
 select StockCode,sum(revenue) as TotalRevenue
  from retail_analysis
  group by StockCode 
  order by TotalRevenue desc limit 10
- 
+``` 
  
  ### 9.Products with high return rates
+ ```
 select stockcode,count(*) as totalreturns
  from retail_analysis
  where isreturn=1 
  group by stockcode
  order by totalreturns desc limit 1
+```
  
  ### 10.Which products generate the most revenue?
+ ```sql
  select StockCode,sum(revenue) as TotalRevenue
  from retail_analysis
  group by StockCode 
  order by TotalRevenue desc limit 1
- 
+ ```
  
  ### 11.Highest Sale Month 
+ ```sql
   select month(InvoiceDate) as month,sum(revenue) as Totalrevenue
   from retail_analysis where year(InvoiceDate)=2011
   group by  month(InvoiceDate) order by Totalrevenue desc limit 1
+```
  
 ### 12. What day of week customers buy the most?
+```sql
 select dayname(InvoiceDate) as month,sum(revenue) as Totalrevenue
  from retail_analysis where year(InvoiceDate)=2011
  group by  dayname(InvoiceDate) order by Totalrevenue desc limit 1
- 
+ ```
 
- 
+---
+
 ## 6.Key Insights 
 •	Thursday generated the highest weekly revenue.
 •	November had the highest monthly orders (seasonality effect).
@@ -149,6 +171,8 @@ select dayname(InvoiceDate) as month,sum(revenue) as Totalrevenue
 •	Returns were very low (~2.21%), showing stable customer behavior.
 •	UK contributed the largest customer base.
 •	A few product codes dominate revenue
+
+---
 
 ##7.Final Business Recommendations
 •	Promote top-selling products to increase sales.
