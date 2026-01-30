@@ -165,21 +165,20 @@ select dayname(InvoiceDate) as month,sum(revenue) as Totalrevenue
 ---
 
 ## 6.Key Insights 
-•	Thursday generated the highest weekly revenue.
-•	November had the highest monthly orders (seasonality effect).
-•	Top 10 customers contributed ~20% of revenue.
-•	Returns were very low (~2.21%), showing stable customer behavior.
-•	UK contributed the largest customer base.
-•	A few product codes dominate revenue
-
+-Thursday generated the highest weekly revenue.
+-	November had the highest monthly orders (seasonality effect).
+-	Top 10 customers contributed ~20% of revenue.
+-	Returns were very low (~2.21%), showing stable customer behavior.
+-	UK contributed the largest customer base.
+- A few product codes dominate revenue
 ---
 
 ## 7.Final Business Recommendations
-•	Promote top-selling products to increase sales.
-•	Target inactive customers with email campaigns.
-•	Offer special deals mid-week since Thursday performs best.
-•	Analyze high-value customers for loyalty programs.
-•	Reduce returns by analyzing reasons for negative invoices.
+-	Promote top-selling products to increase sales.
+-	Target inactive customers with email campaigns.
+-	Offer special deals mid-week since Thursday performs best.
+-	Analyze high-value customers for loyalty programs.
+-	Reduce returns by analyzing reasons for negative invoices.
 
 ---
 
