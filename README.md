@@ -73,9 +73,9 @@ CREATE TABLE retail_analysis (
   IsReturn INT,
   Revenue FLOAT
 );
-
-## Business Problems and Solutions
-### 1.Total Revenue
+---
+**## Business Problems and Solutions
+**### 1.Total Revenue
 select sum(revenue) as totalrevenue from retail_analysis
  
 
