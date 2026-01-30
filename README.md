@@ -174,12 +174,12 @@ select dayname(InvoiceDate) as month,sum(revenue) as Totalrevenue
 
 ---
 
-##7.Final Business Recommendations
+## 7.Final Business Recommendations
 •	Promote top-selling products to increase sales.
 •	Target inactive customers with email campaigns.
 •	Offer special deals mid-week since Thursday performs best.
 •	Analyze high-value customers for loyalty programs.
 •	Reduce returns by analyzing reasons for negative invoices.
 
-
+---
 
