@@ -151,14 +151,14 @@ select stockcode,count(*) as totalreturns
  ### 11.Highest Sale Month 
  ```sql
   select month(InvoiceDate) as month,sum(revenue) as Totalrevenue
-  from retail_analysis where year(InvoiceDate)=2011
+  from retail_analysis
   group by  month(InvoiceDate) order by Totalrevenue desc limit 1
 ```
  
 ### 12. What day of week customers buy the most?
 ```sql
 select dayname(InvoiceDate) as month,sum(revenue) as Totalrevenue
- from retail_analysis where year(InvoiceDate)=2011
+ from retail_analysis 
  group by  dayname(InvoiceDate) order by Totalrevenue desc limit 1
  ```
 
