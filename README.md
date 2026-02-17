@@ -166,7 +166,7 @@ select dayname(InvoiceDate) as month,sum(revenue) as Totalrevenue
 
 ## 6.Dashboard
 
-![Dashboard](Cus_Pur_Dashboard.png)
+![Dashboard](Cust.png)
 
 ## 7..Key Insights 
 -Thursday generated the highest weekly revenue.
